@@ -1,0 +1,49 @@
+@use "../../global" as *;
+
+
+.p-contact {
+  position: relative;
+  padding-bottom: 30px;
+
+  &__img-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+  }
+
+  &__img {
+    @include mq(lv767) {
+      width: 120px;
+    }
+  }
+
+  &__inner {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @include mq(lv767) {
+      padding: 0 20px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 66px;
+
+    @include mq(lv767) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__lead {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 92px;
+
+    @include mq(lv767) {
+      font-size: 14px;
+      margin-bottom: 45px;
+    }
+  }
+}

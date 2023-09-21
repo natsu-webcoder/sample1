@@ -1,0 +1,82 @@
+@use "../global" as *;
+
+
+.l-footer {
+  background-color: #fff;
+  padding-top: 24px;
+
+  &__inner {
+    padding-bottom: 96px;
+    position: relative;
+
+    @include mq(lv767) {
+      padding-bottom: 32px;
+    } 
+  }
+
+  &__logo01,
+  &__logo02 {
+    text-align: center;
+  }
+
+  &__logo01-img {
+    @include mq(lv767) {
+      width: 52px;
+    } 
+  }
+
+  &__logo02 {
+    margin-bottom: 32px;
+  }
+
+  &__logo02-img {
+    @include mq(lv767) {
+      width: 250px;
+    } 
+  }
+
+  &__img01-wrapper, &__img02-wrapper {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__img01-wrapper {
+    left: 0;
+  }
+
+  &__img01 {
+    @include mq(lv767) {
+      width: 150px;
+    } 
+  }
+
+  &__img02-wrapper {
+    right: 0;
+
+    @include mq(lv767) {
+      width: 115px;
+    } 
+  }
+
+  &__copyright {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    padding: 22px 0;
+    background-color: #D9D9D9;
+  }
+}
+
+.l-footer-nav {
+  &__list {
+    display: flex;
+    column-gap: 24px;
+    justify-content: center;
+
+    @include mq(lv1280) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 12px;
+    } 
+  }
+}

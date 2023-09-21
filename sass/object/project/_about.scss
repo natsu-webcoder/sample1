@@ -1,0 +1,95 @@
+@use "../../global" as *;
+
+
+.p-about {
+
+  &__inner {
+    max-width: 1060px;
+    padding: 0 30px;
+    position: relative;
+    margin: 0 auto;
+
+    @include mq(lv767) {
+      padding: 0 20px;
+    }
+  }
+
+  &__text-wrapper {
+    position: absolute;
+
+    @include mq(lv767) {
+      position: static;
+    }
+  }
+
+  &__title {
+    margin-top: 56px;
+
+    @include mq(lv767) {
+      margin-top: 0;
+    }
+
+    span {
+      font-size: 40px;
+      color: #35A1C3;
+      display: inline-block;
+      padding: 8px 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+
+      @include mq(lv1280) {
+        font-size: 32px;
+      }
+
+      @include mq(lv767) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 36px;
+    line-height: 2.5;
+    display: inline-block;
+    padding: 15px;
+    color: #857868;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    @include mq(lv1280) {
+      line-height: 2.3;
+    }
+
+    @include mq(lv767) {
+      margin-top: 18px;
+    }
+  }
+
+  &__img-wrapper {
+    @include mq(lv767) {
+      margin-top: 24px;
+    }
+  }
+
+  &__img01-wrapper,
+  &__img02-wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    @include mq(lv767) {
+      justify-content: center;
+    }
+  }
+
+  &__img01 {
+    @include mq(lv767) {
+      width: 393px;
+    }
+  }
+
+  &__img02-wrapper {
+    margin-top: 38px;
+
+    @include mq(lv767) {
+      margin-top: 24px;
+    }
+  }
+}

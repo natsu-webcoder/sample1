@@ -1,0 +1,18 @@
+@use "../global" as *;
+
+
+.l-section {
+  padding: 90px 0;
+
+  @include mq(lv1280) {
+    padding: 70px 0;
+  }
+
+  @include mq(lv767) {
+    padding: 45px 0;
+  }
+}
+
+.l-section--white {
+  background-color: #fff;
+}

@@ -1,0 +1,93 @@
+@use "../../global" as *;
+
+
+.accordion {
+  &__item {
+    &:not(:first-child) {
+      margin-top: 30px;
+
+      @include mq(lv767) {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__question {
+    font-size: 18px;
+    padding: 12px 14px;
+    background-color: #fff;
+    cursor: pointer;
+
+    @include mq(lv767) {
+      font-size: 15px;
+    }
+
+    &.active {
+      & .accordion__question-inner::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__answer {
+    display: none;
+    padding-top: 24px;
+    font-weight: normal;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__question-inner,
+  &__answer-inner {
+    position: relative;
+  }
+
+  &__question-inner {
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+
+    @include mq(lv767) {
+      column-gap: 12px;
+    }
+
+    &::after {
+      display: block;
+      content: "expand_more";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-family: "Material Icons Round";
+      font-size: 24px;
+      color: #C6C6C6;
+      transform: translateY(-50%);
+      transition: all .3s;
+    }
+  }
+
+
+  &__label {
+    font-family: 'Roboto';
+    font-size: 24px;
+    text-align: center;
+
+    @include mq(lv767) {
+      font-size: 16px;
+      align-self: flex-start;
+    }
+  }
+
+  &__text {
+    @include mq(lv767) {
+      padding-right: 30px;
+    }
+  }
+
+  &__text--answer {
+    @include mq(lv767) {
+      padding: 0 14px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "../../global" as *;
+
+
+.p-product {
+  &__heading {
+    margin-bottom: 90px;
+
+    @include mq(lv1280) {
+      margin-bottom: 70px;
+    }
+
+    @include mq(lv767) {
+      margin-bottom: 45px;
+    }
+  }
+}

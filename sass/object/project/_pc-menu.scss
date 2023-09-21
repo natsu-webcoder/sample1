@@ -1,0 +1,28 @@
+@use "../../global" as *;
+
+
+.p-pc-menu {
+  flex: 1;
+  display: flex;
+
+  @include mq(lv1280) {
+    display: none;
+  }
+
+  &:first-child {
+    justify-content: flex-end;
+  }
+
+  &:last-child {
+    justify-content: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px;
+
+    @include mq(lv1140) {
+      gap: 30px;
+    }
+  }
+}

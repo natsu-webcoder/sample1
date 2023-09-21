@@ -1,0 +1,39 @@
+@use "../../global" as *;
+
+
+.p-faq {
+  position: relative;
+
+  &__img-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+  }
+
+  &__img {
+    @include mq(lv767) {
+      width: 120px;
+    }
+  }
+  
+  &__heading {
+    margin-bottom: 70px;
+    text-transform: uppercase;
+
+    @include mq(lv767) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__inner {
+    max-width: 740px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    @include mq(lv767) {
+      padding: 0 20px;
+    }
+  }
+
+}

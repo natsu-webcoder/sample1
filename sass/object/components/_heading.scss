@@ -1,0 +1,11 @@
+@use "../../global" as *;
+
+
+.c-heading {
+  text-align: center;
+  font-size: 32px;
+  
+  @include mq(lv767) {
+    font-size: 24px;
+  }
+}

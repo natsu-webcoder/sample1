@@ -1,0 +1,10 @@
+@use "../../global" as *;
+
+
+.u-pc-only {
+  display: block;
+
+  @include mq(lv767) {
+    display: none;
+  }
+}

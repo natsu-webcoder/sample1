@@ -1,0 +1,12 @@
+@use "../global" as *;
+
+
+.l-inner {
+  max-width: 994px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include mq(lv767) {
+    padding: 0 20px;
+  }
+}

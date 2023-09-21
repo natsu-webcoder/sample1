@@ -1,0 +1,97 @@
+@use "../../global" as *;
+
+
+.p-mv {
+  height: 854px;
+  position: relative;
+  background-image: url(../img/mv.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mq(lv767) {
+    height: 667px;
+  }
+
+  &__text-wrapper {
+    writing-mode: vertical-rl;
+    font-size: 32px;
+    letter-spacing: 0.5em;
+    position: absolute;
+    right: 8%;
+    top: 112px;
+
+    @include mq(lv1280) {
+      font-size: 32px;
+      letter-spacing: 0.3em;
+      writing-mode: horizontal-tb;
+      top: auto;
+      right: auto;
+      bottom: 118px;
+      left: 8%;
+    }
+
+    @include mq(lv767) {
+      font-size: 24px;
+      letter-spacing: 0.1em;
+    }
+
+    @include mq(lv375) {
+      left: 5%;
+    }
+  }
+
+  &__text {
+    width: 62px;
+    line-height: 62px;
+    padding-top: 5px;
+    background-color: #fff;
+
+    @include mq(lv1280) {
+      width: auto;
+      line-height: 1;
+      padding: 8px;
+    }
+
+    &:not(:first-child) {
+      margin-right: 20px;
+
+      @include mq(lv1280) {
+        margin-right: 0;
+        margin-top: 24px;
+      }
+
+      @include mq(lv767) {
+        margin-top: 16px;
+      }
+    }
+
+    &:last-child {
+      display: inline-block;
+    }
+  }
+
+  &__img-wrapper {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    background-color: $main-color;
+    width: 154px;
+    height: 154px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+    @include mq(lv767) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__img {
+    @include mq(lv767) {
+      width: 52px;
+    }
+  }
+}

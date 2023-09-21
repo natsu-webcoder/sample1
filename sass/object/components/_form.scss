@@ -1,0 +1,150 @@
+@use "../../global" as *;
+
+
+.c-form {
+  padding: 38px 0 42px 0;
+  background-color: #fff;
+
+  &__inner {
+    padding: 0 76px;
+
+    @include mq(lv767) {
+      padding: 0 24px;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    @include mq(lv767) {
+      display: block;
+    }
+
+    &--first, &--last {
+      align-items: flex-start;
+    }
+
+    &--first {
+      @include mq() {
+        margin-bottom: 26px;
+      }
+    }
+
+    &+.c-form__item {
+      margin-top: 24px;
+
+      @include mq() {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    flex: 0 0 44%;
+
+    @include mq(lv767) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__require {
+    font-size: 14px;
+    padding: 5px 11px;
+    border-radius: 10px;
+    background-color: #FED966;
+    margin-left: 18px;
+
+    @include mq(lv767) {
+      font-size: 12px;
+      padding: 3px 9px;
+      margin-left: 10px;
+    }
+  }
+
+  &__radio {
+    display: flex;
+    margin-bottom: 10px;
+    font-weight: normal;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & label {
+      position: relative;
+      padding-left: 23px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid #4E301B;
+      }
+    }
+
+    & input[type="radio"] {
+      appearance: none;
+
+      &:checked+label::before {
+        border: 6px solid #4E301B;
+      }
+    }
+  }
+
+  &__input {
+    font-weight: normal;
+    flex: 1;
+    color: #333;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #EFEAE6;
+
+    @include mq(lv767) {
+      width: 100%;
+    }
+  }
+
+  &__input--postcode {
+    max-width: 157px;
+  }
+
+  &__textarea {
+    font-weight: normal;
+    height: 170px;
+    width: 100%;
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #EFEAE6;
+    resize: none;
+  }
+
+  &__btn {
+    text-align: center;
+    margin-top: 50px;
+
+    @include mq(lv767) {
+      margin-top: 32px;
+    }
+
+    & .c-btn {
+      @include mq(lv767) {
+        width: 200px;
+      }
+    }
+  }
+}

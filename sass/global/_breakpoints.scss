@@ -1,0 +1,20 @@
+@use "sass:map";
+
+// global > breakpoint
+// ------------------------------
+$breakpoints: (
+    "lv375": 370px,
+    "lv767": 760px,
+    "lv960": 960px,
+    "lv1280": 1270px,
+);
+
+@mixin mq($breakpoint: lv767) {
+    @media screen and (max-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+}
+
+// PCビュー：1,280px～
+// タブレットビュー：768px～
+// スマホビュー：～767px
